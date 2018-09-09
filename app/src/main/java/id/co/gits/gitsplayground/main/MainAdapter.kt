@@ -1,9 +1,10 @@
-package id.co.gits.gitsplayground
+package id.co.gits.gitsplayground.main
 
 import android.databinding.DataBindingUtil
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import id.co.gits.gitsplayground.R
 import id.co.gits.gitsplayground.databinding.MainItemBinding
 
 class MainAdapter(private var data: List<MainModel>,

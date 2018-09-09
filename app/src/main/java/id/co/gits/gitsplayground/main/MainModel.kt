@@ -1,4 +1,4 @@
-package id.co.gits.gitsplayground
+package id.co.gits.gitsplayground.main
 
 /**
  * Dibuat oleh Irfan Irawan Sukirman
