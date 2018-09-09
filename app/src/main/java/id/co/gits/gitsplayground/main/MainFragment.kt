@@ -12,6 +12,7 @@ import id.co.gits.gitsplayground.base.BaseFragment
 import id.co.gits.gitsplayground.databinding.MainFragmentBinding
 import id.co.gits.gitsplayground.recyclerviewbasic.RecyclerviewBasicFragment
 import id.co.gits.gitsplayground.recyclerviewcard.RecyclerviewCardFragment
+import id.co.gits.gitsplayground.recyclerviewgroupbasic.RecyclerviewGroupBasicFragment
 import kotlinx.android.synthetic.main.main_fragment.*
 
 /**
@@ -36,7 +37,7 @@ class MainFragment : BaseFragment(), MainItemActionListener {
             val menuData = ArrayList<MainModel>()
             menuData.add(MainModel(0, "Recyclerview Basic"))
             menuData.add(MainModel(1, "Recyclerview Cardview"))
-            menuData.add(MainModel(0, "Recyclerview Basic"))
+            menuData.add(MainModel(2, "Recyclerview Group Basic"))
             menuData.add(MainModel(0, "Recyclerview Basic Basic Super Glue"))
             menuData.add(MainModel(0, "Recyclerview Basic"))
             menuData.add(MainModel(0, "Recyclerview Basic Basic Super Glue"))
@@ -66,7 +67,7 @@ class MainFragment : BaseFragment(), MainItemActionListener {
         when (menu.id) {
             0 -> fragment = RecyclerviewBasicFragment.newInstance()
             1 -> fragment = RecyclerviewCardFragment.newInstance()
-            2 -> fragment = RecyclerviewBasicFragment.newInstance()
+            2 -> fragment = RecyclerviewGroupBasicFragment.newInstance()
         }
 
         (activity as MainActivity).replaceFragment(fragment)
