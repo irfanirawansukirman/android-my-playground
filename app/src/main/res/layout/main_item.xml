@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="menu"
+            type="id.co.gits.gitsplayground.MainModel" />
+
+        <variable
+            name="menuItemListener"
+            type="id.co.gits.gitsplayground.MainItemActionListener" />
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardBackgroundColor="#FFFFFF"
+        card_view:cardCornerRadius="2dp"
+        card_view:cardUseCompatPadding="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/rubik_regular"
+            android:gravity="center"
+            android:lineSpacingExtra="2dp"
+            android:onClick="@{() -> menuItemListener.onMenuClick(menu)}"
+            android:padding="16dp"
+            android:text="@{menu.title}"
+            android:textSize="16sp"
+            tools:text="@string/app_name" />
+    </android.support.v7.widget.CardView>
+</layout>

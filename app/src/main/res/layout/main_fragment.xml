@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_main_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FAFAFA"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:padding="3dp" />
+</layout>

@@ -4,7 +4,6 @@ import android.databinding.DataBindingUtil
 import android.os.Bundle
 import id.co.gits.gitsplayground.base.BaseActivity
 import id.co.gits.gitsplayground.databinding.MainActivityBinding
-import id.co.gits.gitsplayground.recyclerviewbasic.RecyclerviewBasicFragment
 
 class MainActivity : BaseActivity() {
 
@@ -15,7 +14,7 @@ class MainActivity : BaseActivity() {
         binding.apply {
             supportFragmentManager
                     .beginTransaction()
-                    .replace(R.id.frame_container, RecyclerviewBasicFragment.newInstance())
+                    .replace(R.id.frame_container, MainFragment.newInstance())
                     .commit()
         }
     }
