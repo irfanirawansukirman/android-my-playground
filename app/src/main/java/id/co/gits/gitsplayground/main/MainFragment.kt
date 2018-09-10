@@ -65,9 +65,9 @@ class MainFragment : BaseFragment(), MainItemActionListener {
         var fragment = Fragment()
 
         when (menu.id) {
-            0 -> fragment = RecyclerviewBasicFragment.newInstance()
-            1 -> fragment = RecyclerviewCardFragment.newInstance()
-            2 -> fragment = RecyclerviewGroupBasicFragment.newInstance()
+            0 -> fragment = RecyclerviewBasicFragment.newInstance(menu.title)
+            1 -> fragment = RecyclerviewCardFragment.newInstance(menu.title)
+            2 -> fragment = RecyclerviewGroupBasicFragment.newInstance(menu.title)
         }
 
         (activity as MainActivity).replaceFragment(fragment)

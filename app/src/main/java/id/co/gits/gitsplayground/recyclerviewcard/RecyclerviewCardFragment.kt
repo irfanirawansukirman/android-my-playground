@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import id.co.gits.gitsplayground.base.BaseFragment
 import id.co.gits.gitsplayground.databinding.RecyclerviewCardFragmentBinding
 import id.co.gits.gitsplayground.main.MainActivity
+import id.co.gits.gitsplayground.recyclerviewbasic.RecyclerviewBasicFragment
+import id.co.gits.gitsplayground.util.putArgs
 import kotlinx.android.synthetic.main.recyclerview_card_fragment.*
 
 /**
@@ -26,7 +28,7 @@ class RecyclerviewCardFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        (activity as MainActivity).setToolbarTitle(RecyclerviewCardFragment::class.java.simpleName)
+        (activity as MainActivity).setToolbarTitle(arguments?.getString(TAG) ?: "")
         (activity as MainActivity).showHomeBackButton(true)
 
         recycler_card.apply {
@@ -42,6 +44,10 @@ class RecyclerviewCardFragment : BaseFragment() {
     }
 
     companion object {
-        fun newInstance() = RecyclerviewCardFragment().apply { }
+        var TAG = RecyclerviewCardFragment::class.java.simpleName
+
+        fun newInstance(title: String) = RecyclerviewCardFragment().putArgs {
+            putString(TAG, title)
+        }
     }
 }

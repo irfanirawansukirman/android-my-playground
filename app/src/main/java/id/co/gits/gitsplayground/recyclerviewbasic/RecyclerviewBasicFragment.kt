@@ -12,6 +12,7 @@ import id.co.gits.gitsplayground.databinding.RecyclerviewBasicFragmentBinding
 import kotlinx.android.synthetic.main.recyclerview_basic_fragment.*
 import id.co.gits.gitsplayground.util.DividerItemDecoration
 import id.co.gits.gitsplayground.R
+import id.co.gits.gitsplayground.util.putArgs
 
 /**
  * Dibuat oleh Irfan Irawan Sukirman
@@ -20,16 +21,16 @@ import id.co.gits.gitsplayground.R
 class RecyclerviewBasicFragment: BaseFragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val binding = RecyclerviewBasicFragmentBinding.inflate(inflater, container, false).apply {
+        val viewBinding = RecyclerviewBasicFragmentBinding.inflate(inflater, container, false).apply {
 
         }
 
-        return binding.root
+        return viewBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        (activity as MainActivity).setToolbarTitle(RecyclerviewBasicFragment::class.java.simpleName)
+        (activity as MainActivity).setToolbarTitle(arguments?.getString(TAG) ?: "")
         (activity as MainActivity).showHomeBackButton(true)
 
         recycler_basic.apply {
@@ -47,6 +48,10 @@ class RecyclerviewBasicFragment: BaseFragment() {
     }
 
     companion object {
-        fun newInstance() = RecyclerviewBasicFragment().apply {  }
+        var TAG = RecyclerviewBasicFragment::class.java.simpleName
+
+        fun newInstance(title: String) = RecyclerviewBasicFragment().putArgs {
+            putString(TAG, title)
+        }
     }
 }
