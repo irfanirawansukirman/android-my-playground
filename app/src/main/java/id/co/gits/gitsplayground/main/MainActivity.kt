@@ -3,7 +3,6 @@ package id.co.gits.gitsplayground.main
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.view.Menu
 import android.view.MenuItem
 import id.co.gits.gitsplayground.R
 import id.co.gits.gitsplayground.base.BaseActivity
@@ -36,32 +35,22 @@ class MainActivity : BaseActivity() {
                 .commit()
     }
 
-    private fun clearView() {
-        if (supportFragmentManager.backStackEntryCount > 0) {
-            supportFragmentManager.popBackStackImmediate()
-            showHomeBackButton(false)
-            replaceFragment(MainFragment.newInstance())
-        } else {
-            finish()
-        }
-    }
-
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item?.itemId) {
             android.R.id.home -> {
-                clearView()
-                showHomeBackButton(false)
-                replaceFragment(MainFragment.newInstance())
+                onBackPressed()
             }
-            else -> return super.onOptionsItemSelected(item)
         }
-
-        return false
+        return super.onOptionsItemSelected(item)
     }
 
     override fun onBackPressed() {
-        super.onBackPressed()
-        clearView()
+        if (supportFragmentManager.backStackEntryCount != 1) {
+            supportFragmentManager.popBackStackImmediate()
+            showHomeBackButton(false)
+        } else {
+            finish()
+        }
     }
 
 }
