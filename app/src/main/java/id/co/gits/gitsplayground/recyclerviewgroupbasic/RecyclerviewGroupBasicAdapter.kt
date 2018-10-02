@@ -8,16 +8,19 @@ import id.co.gits.gitsplayground.R
 import id.co.gits.gitsplayground.databinding.RecyclerviewGroupBasicHeaderBinding
 import id.co.gits.gitsplayground.databinding.RecyclerviewGroupBasicItemBinding
 
-class RecyclerviewGroupBasicAdapter(private var data: List<RecyclerviewGroupBasicModel>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class RecyclerviewGroupBasicAdapter(private var data: List<RecyclerviewGroupBasicModel>) :
+        RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return if (viewType == R.layout.recyclerview_group_basic_header) {
-            val viewBinding: RecyclerviewGroupBasicHeaderBinding = DataBindingUtil.inflate(LayoutInflater.from(parent.context),
+            val viewBinding: RecyclerviewGroupBasicHeaderBinding = DataBindingUtil
+                    .inflate(LayoutInflater.from(parent.context),
                     R.layout.recyclerview_group_basic_header, parent, false)
 
             HeaderItemRow(viewBinding)
         } else {
-            val viewBinding: RecyclerviewGroupBasicItemBinding = DataBindingUtil.inflate(LayoutInflater.from(parent.context),
+            val viewBinding: RecyclerviewGroupBasicItemBinding = DataBindingUtil
+                    .inflate(LayoutInflater.from(parent.context),
                     R.layout.recyclerview_group_basic_item, parent, false)
 
             MainItemRow(viewBinding)

@@ -13,6 +13,7 @@ import id.co.gits.gitsplayground.databinding.MainFragmentBinding
 import id.co.gits.gitsplayground.recyclerviewbasic.RecyclerviewBasicFragment
 import id.co.gits.gitsplayground.recyclerviewcard.RecyclerviewCardFragment
 import id.co.gits.gitsplayground.recyclerviewgroupbasic.RecyclerviewGroupBasicFragment
+import id.co.gits.gitsplayground.recyclerviewgroupsticky.RecyclerviewGroupStickyFragment
 import kotlinx.android.synthetic.main.main_fragment.*
 
 /**
@@ -38,7 +39,7 @@ class MainFragment : BaseFragment(), MainItemActionListener {
             menuData.add(MainModel(0, "Recyclerview Basic"))
             menuData.add(MainModel(1, "Recyclerview Cardview"))
             menuData.add(MainModel(2, "Recyclerview Group Basic"))
-            menuData.add(MainModel(0, "Recyclerview Basic Basic Super Glue"))
+            menuData.add(MainModel(3, "Recyclerview Group Sticky"))
             menuData.add(MainModel(0, "Recyclerview Basic"))
             menuData.add(MainModel(0, "Recyclerview Basic Basic Super Glue"))
             menuData.add(MainModel(0, "Recyclerview Basic"))
@@ -68,6 +69,7 @@ class MainFragment : BaseFragment(), MainItemActionListener {
             0 -> fragment = RecyclerviewBasicFragment.newInstance(menu.title)
             1 -> fragment = RecyclerviewCardFragment.newInstance(menu.title)
             2 -> fragment = RecyclerviewGroupBasicFragment.newInstance(menu.title)
+            3 -> fragment = RecyclerviewGroupStickyFragment.newInstance(menu.title)
         }
 
         (activity as MainActivity).replaceFragment(fragment)
