@@ -5,6 +5,7 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
@@ -16,8 +17,7 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration {
     private boolean mShowFirstDivider = false;
     private boolean mShowLastDivider = false;
 
-
-    public DividerItemDecoration(Context context, AttributeSet attrs) {
+    private DividerItemDecoration(Context context, AttributeSet attrs) {
         final TypedArray a = context
                 .obtainStyledAttributes(attrs, new int[]{android.R.attr.listDivider});
         mDivider = a.getDrawable(0);
@@ -31,7 +31,7 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration {
         mShowLastDivider = showLastDivider;
     }
 
-    public DividerItemDecoration(Drawable divider) {
+    private DividerItemDecoration(Drawable divider) {
         mDivider = divider;
     }
 
