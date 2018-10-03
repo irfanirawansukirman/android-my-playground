@@ -36,6 +36,7 @@
                     android:scheme="https" />
             </intent-filter>
         </activity>
+        <activity android:name=".cordinatorlayoutoverlappingbasic.CoorOverlappingViewActivity"></activity>
     </application>
 
 </manifest>

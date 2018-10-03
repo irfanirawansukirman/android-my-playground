@@ -11,8 +11,8 @@ import android.view.View
 import android.view.ViewGroup
 import id.co.gits.gitsplayground.R
 import id.co.gits.gitsplayground.base.BaseFragment
+import id.co.gits.gitsplayground.cordinatorlayoutoverlappingbasic.CoorOverlappingViewActivity
 import id.co.gits.gitsplayground.databinding.MainFragmentBinding
-import id.co.gits.gitsplayground.deeplinkbasic.DeeplinkBasicActivity
 import id.co.gits.gitsplayground.recyclerviewbasic.RecyclerviewBasicFragment
 import id.co.gits.gitsplayground.recyclerviewcard.RecyclerviewCardFragment
 import id.co.gits.gitsplayground.recyclerviewgroupbasic.RecyclerviewGroupBasicFragment
@@ -44,8 +44,8 @@ class MainFragment : BaseFragment(), MainItemActionListener {
             menuData.add(MainModel(2, "Recyclerview Group Basic"))
             menuData.add(MainModel(3, "Recyclerview Group Sticky"))
             menuData.add(MainModel(4, "Deeplink Basic"))
-            menuData.add(MainModel(0, "Deeplink Multiple Deep Links"))
-            menuData.add(MainModel(0, "Recyclerview Basic"))
+            menuData.add(MainModel(5, "Deeplink Multiple Deep Links"))
+            menuData.add(MainModel(6, "Coordinator Anchor View"))
             menuData.add(MainModel(0, "Recyclerview Basic Basic Super Glue"))
             menuData.add(MainModel(0, "Recyclerview Basic"))
             menuData.add(MainModel(0, "Recyclerview Basic Basic Super Glue"))
@@ -74,6 +74,8 @@ class MainFragment : BaseFragment(), MainItemActionListener {
             2 -> fragment = RecyclerviewGroupBasicFragment.newInstance(menu.title)
             3 -> fragment = RecyclerviewGroupStickyFragment.newInstance(menu.title)
             4 -> startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://testdeeplink.com/lorem/123")))
+            5 -> ""
+            6 -> startActivity(Intent(context, CoorOverlappingViewActivity::class.java))
         }
 
         (activity as MainActivity).replaceFragment(fragment)
