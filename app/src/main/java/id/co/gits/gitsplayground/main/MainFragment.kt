@@ -19,6 +19,8 @@ import id.co.gits.gitsplayground.recyclerviewgroupbasic.RecyclerviewGroupBasicFr
 import id.co.gits.gitsplayground.recyclerviewgroupsticky.RecyclerviewGroupStickyFragment
 import kotlinx.android.synthetic.main.main_fragment.*
 
+import id.co.gits.gitsplayground.reactiveprogramming.ReactiveProgrammingActivity
+
 /**
  * Dibuat oleh Irfan Irawan Sukirman
  * @Copyright 2018
@@ -57,7 +59,7 @@ class MainFragment : BaseFragment(), MainItemActionListener {
             menuData.add(MainModel(0, "Recyclerview Basic Basic Super Glue"))
             menuData.add(MainModel(0, "Recyclerview Basic"))
             menuData.add(MainModel(0, "Recyclerview Basic Basic Super Glue"))
-            menuData.add(MainModel(0, "Recyclerview Basic"))
+            menuData.add(MainModel(7, "Reactive Programming"))
 
             layoutManager = StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL)
             setHasFixedSize(true)
@@ -76,6 +78,7 @@ class MainFragment : BaseFragment(), MainItemActionListener {
             4 -> startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://testdeeplink.com/lorem/123")))
             5 -> ""
             6 -> startActivity(Intent(context, CoorOverlappingViewActivity::class.java))
+            7 -> startActivity(Intent(context, ReactiveProgrammingActivity::class.java))
         }
 
         (activity as MainActivity).replaceFragment(fragment)

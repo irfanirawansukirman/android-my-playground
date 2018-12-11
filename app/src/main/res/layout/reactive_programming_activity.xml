@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".reactiveprogramming.ReactiveProgrammingActivity">
+
+    <TextView
+        android:gravity="center"
+        android:text="@string/for_the_result_look_at_the_logcat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_marginTop="16dp"
+        android:id="@+id/btn_reactive_fromArray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/from_array_example"/>
+
+    <Button
+        android:layout_marginTop="8dp"
+        android:id="@+id/btn_reactive_rangeWithMultipleOperator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/range_with_map_and_filter"/>
+
+    <Button
+        android:id="@+id/btn_reactive_zip"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/multiple_request_api_with_zip_operator"/>
+
+</LinearLayout>

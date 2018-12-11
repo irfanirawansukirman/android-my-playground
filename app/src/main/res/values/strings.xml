@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Gits Playground</string>
+    <string name="for_the_result_look_at_the_logcat">For the result look at the Logcat</string>
+    <string name="from_array_example">From Array Example</string>
+    <string name="range_with_map_and_filter">Range with Map and Filter</string>
+    <string name="multiple_request_api_with_zip_operator">Multiple Request API with Zip Operator</string>
 </resources>
