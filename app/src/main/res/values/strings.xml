@@ -4,4 +4,5 @@
     <string name="from_array_example">From Array Example</string>
     <string name="range_with_map_and_filter">Range with Map and Filter</string>
     <string name="multiple_request_api_with_zip_operator">Multiple Request API with Zip Operator</string>
+    <string name="play_worker">Play Worker</string>
 </resources>

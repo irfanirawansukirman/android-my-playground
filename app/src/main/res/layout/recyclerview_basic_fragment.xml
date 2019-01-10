@@ -6,10 +6,25 @@
 
     </data>
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycler_basic"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:overScrollMode="never"
-        app:layoutManager="android.support.v7.widget.LinearLayoutManager"/>
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_basic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:visibility="invisible"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+        <id.co.gits.gitsplayground.util.widget.SlideButton
+            android:id="@+id/slide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:max="100"
+            android:progressDrawable="@android:color/transparent"
+            android:thumb="@drawable/ic_android_black_24dp" />
+    </RelativeLayout>
 </layout>
