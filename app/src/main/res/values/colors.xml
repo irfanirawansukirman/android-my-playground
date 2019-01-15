@@ -3,4 +3,14 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="greyBackgroundDefault">#424242</color>
+    <color name="greyBackgroundLight">#F2F2F2</color>
+    <color name="greyTitle">@color/greyIcon</color>
+    <color name="greyTitleDark">@color/greyIcon</color>
+    <color name="greySubtitle">#999999</color>
+    <color name="greyIcon">#666666</color>
+    <color name="greyDefault">#EEEEEE</color>
+    <color name="greyLigth">#dfdfdf</color>
+    <color name="greyTransparent50">#80424242</color>
 </resources>

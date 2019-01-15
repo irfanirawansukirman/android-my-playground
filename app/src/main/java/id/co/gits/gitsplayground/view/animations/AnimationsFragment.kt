@@ -11,6 +11,7 @@ import id.co.gits.gitsplayground.base.BaseFragment
 import id.co.gits.gitsplayground.util.putArgs
 import kotlinx.android.synthetic.main.animations_fragment.*
 import id.co.gits.gitsplayground.view.animations.elementransition.MyListActivity
+import id.co.gits.gitsplayground.view.animations.buttonroundedpressed.RoundedButtonPressedActivity
 
 class AnimationsFragment: BaseFragment() {
 
@@ -22,6 +23,9 @@ class AnimationsFragment: BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
         txt_animations_transition.setOnClickListener {
             startActivity(Intent(context, MyListActivity::class.java))
+        }
+        txt_animations_roundButton.setOnClickListener {
+            startActivity(Intent(context, RoundedButtonPressedActivity::class.java))
         }
     }
 

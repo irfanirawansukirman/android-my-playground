@@ -68,7 +68,8 @@
         <!-- android:name="android.support.PARENT_ACTIVITY" -->
         <!-- android:value="id.co.gits.gitsplayground.view.animations.elementransition.ItemListActivity" /> -->
         <!-- </activity> -->
-        <activity android:name=".view.animations.elementransition.details.DetailActivity"></activity>
+        <activity android:name=".view.animations.elementransition.details.DetailActivity" />
+        <activity android:name=".view.animations.buttonroundedpressed.RoundedButtonPressedActivity"></activity>
     </application>
 
 </manifest>

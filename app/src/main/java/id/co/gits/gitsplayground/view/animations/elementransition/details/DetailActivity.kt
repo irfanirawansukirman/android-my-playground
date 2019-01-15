@@ -1,6 +1,5 @@
 package id.co.gits.gitsplayground.view.animations.elementransition.details
 
-import android.os.Build
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
