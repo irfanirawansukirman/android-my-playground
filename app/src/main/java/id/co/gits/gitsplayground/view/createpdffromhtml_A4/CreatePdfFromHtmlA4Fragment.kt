@@ -125,7 +125,6 @@ class CreatePdfFromHtmlA4Fragment : BaseFragment() {
             progressDialog.setMessage("Please wait")
             progressDialog.show()
             PdfView.createWebPrintJob(requireActivity(), webView, path, fileName, object : PdfView.Callback {
-
                 override fun success(path: String) {
                     progressDialog.dismiss()
                     PdfView.openPdfFile(

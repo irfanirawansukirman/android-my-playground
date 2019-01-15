@@ -5,4 +5,8 @@
     <string name="range_with_map_and_filter">Range with Map and Filter</string>
     <string name="multiple_request_api_with_zip_operator">Multiple Request API with Zip Operator</string>
     <string name="play_worker">Play Worker</string>
+    <string name="shared_element_transition">Shared Element Transition</string>
+    <string name="title_item_list">Items</string>
+    <string name="title_item_detail">Item Detail</string>
+    <string name="lorelorelorelorelereorlereorlereorelreo">Lorelorelorelorelereorlereorlereorelreo</string>
 </resources>

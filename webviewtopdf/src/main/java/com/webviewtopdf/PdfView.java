@@ -78,7 +78,6 @@ public class PdfView {
         }
     }
 
-
     /**
      * create alert dialog to open the pdf file
      * @param activity pass the current activity context

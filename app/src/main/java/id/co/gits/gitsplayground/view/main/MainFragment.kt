@@ -19,6 +19,7 @@ import id.co.gits.gitsplayground.view.recyclerviewgroupbasic.RecyclerviewGroupBa
 import id.co.gits.gitsplayground.view.recyclerviewgroupsticky.RecyclerviewGroupStickyFragment
 import id.co.gits.gitsplayground.view.workmanager.WorkmanagerActivity
 import id.co.gits.gitsplayground.view.createpdffromhtml_A4.CreatePdfFromHtmlA4Fragment
+import id.co.gits.gitsplayground.view.animations.AnimationsFragment
 import id.co.gits.gitsplayground.view.recyclerviewpaging.RecyclerviewPagingFragment
 import kotlinx.android.synthetic.main.main_fragment.*
 
@@ -54,7 +55,7 @@ class MainFragment : BaseFragment(), MainItemActionListener {
             menuData.add(MainModel(8, "Workmanager Basic"))
             menuData.add(MainModel(9, "Recyclerview Paging With API"))
             menuData.add(MainModel(10, "Create PDF From HTML - A4"))
-            menuData.add(MainModel(0, "Recyclerview Basic"))
+            menuData.add(MainModel(11, "The world of animations"))
             menuData.add(MainModel(0, "Recyclerview Basic Basic Super Glue"))
             menuData.add(MainModel(0, "Recyclerview Basic"))
             menuData.add(MainModel(0, "Recyclerview Basic Basic Super Glue"))
@@ -85,6 +86,7 @@ class MainFragment : BaseFragment(), MainItemActionListener {
             8 -> startActivity(Intent(context, WorkmanagerActivity::class.java))
             9 -> fragment = RecyclerviewPagingFragment.newInstance(menu.title)
             10 -> fragment = CreatePdfFromHtmlA4Fragment.newInstance(menu.title)
+            11 -> fragment = AnimationsFragment.newInstance()
         }
 
         (activity as MainActivity).replaceFragment(fragment)
