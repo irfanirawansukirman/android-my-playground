@@ -14,7 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.main.MainActivity">
+        <activity android:name=".view.animations.expandsncollapseview.ExpandsCollapseActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -70,7 +70,8 @@
         <!-- </activity> -->
         <activity android:name=".view.animations.elementransition.details.DetailActivity" />
         <activity android:name=".view.animations.buttonroundedpressed.RoundedButtonPressedActivity" />
-        <activity android:name=".view.animations.hidefabwhenscroll.HideFabActivity"></activity>
+        <activity android:name=".view.animations.hidefabwhenscroll.HideFabActivity" />
+        <activity android:name=".view.main.MainActivity"/>
     </application>
 
 </manifest>
