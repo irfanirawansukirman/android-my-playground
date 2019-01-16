@@ -10,4 +10,7 @@
     <string name="title_item_detail">Item Detail</string>
     <string name="lorelorelorelorelereorlereorlereorelreo">Lorelorelorelorelereorlereorlereorelreo</string>
     <string name="rounded_button">Rounded Button</string>
+    <string name="recyclerview">Recyclerview</string>
+    <string name="nestedscrollview">Nestedscrollview</string>
+    <string name="hide_fab_when_scrolling">Hide FAB when scrolling &amp; FAB child visibility with parent</string>
 </resources>
