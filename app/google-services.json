@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "605584515672",
+    "firebase_url": "https://android-gits-playground.firebaseio.com",
+    "project_id": "android-gits-playground",
+    "storage_bucket": "android-gits-playground.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:605584515672:android:d93d57c6aca272e1",
+        "android_client_info": {
+          "package_name": "id.co.gits.gitsplayground"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "605584515672-t9nlaqgv7l3ftjn8b5evck3jn2j6bkhd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.co.gits.gitsplayground",
+            "certificate_hash": "e4534637946484d9db0136e6cb66eef60272e147"
+          }
+        },
+        {
+          "client_id": "605584515672-4uh04forl7hhrin1802l4e5d30ehb9vu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.co.gits.gitsplayground",
+            "certificate_hash": "4d6be0e5eb3a220f0acebef29cb15391be9dda7a"
+          }
+        },
+        {
+          "client_id": "605584515672-ou21d273d0g3cib9bq5jl259bjiosvi1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmgosEL3yoMgGRMbAfiTHmyeDL8Zz0agY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "605584515672-ou21d273d0g3cib9bq5jl259bjiosvi1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

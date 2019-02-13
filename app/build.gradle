@@ -15,8 +15,18 @@ android {
         multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+    signingConfigs {
+        released {
+            storeFile file("${rootDir}/generalkey.jks")
+            storePassword "12345678"
+            keyAlias "12345678"
+            keyPassword "12345678"
+        }
+    }
     buildTypes {
         release {
+            signingConfig signingConfigs.released
+
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -26,6 +36,14 @@ android {
     }
     dataBinding {
         enabled = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
     }
 }
 
@@ -61,4 +79,7 @@ dependencies {
     kapt 'androidx.databinding:databinding-compiler:3.2.1'
     kapt 'com.airbnb:deeplinkdispatch-processor:3.1.1'
     implementation project(':webviewtopdf')
+    implementation 'com.google.firebase:firebase-messaging:11.0.2'
 }
+
+ apply plugin: 'com.google.gms.google-services'

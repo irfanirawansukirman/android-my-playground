@@ -12,6 +12,7 @@ import id.co.gits.gitsplayground.view.animations.buttonroundedpressed.RoundedBut
 import id.co.gits.gitsplayground.view.animations.elementransition.MyListActivity
 import id.co.gits.gitsplayground.view.animations.hidefabwhenscroll.HideFabActivity
 import kotlinx.android.synthetic.main.animations_fragment.*
+import id.co.gits.gitsplayground.view.animations.expandsncollapseview.ExpandsCollapseActivity
 
 class AnimationsFragment : BaseFragment() {
 
@@ -29,6 +30,9 @@ class AnimationsFragment : BaseFragment() {
         }
         txt_animations_hideFab.setOnClickListener {
             startActivity(Intent(context, HideFabActivity::class.java))
+        }
+        txt_animations_expandsCollapse.setOnClickListener {
+            startActivity(Intent(context, ExpandsCollapseActivity::class.java))
         }
     }
 

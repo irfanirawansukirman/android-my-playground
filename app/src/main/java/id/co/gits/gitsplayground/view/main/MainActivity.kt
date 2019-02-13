@@ -1,12 +1,15 @@
 package id.co.gits.gitsplayground.view.main
 
+import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.util.Log
 import android.view.MenuItem
 import id.co.gits.gitsplayground.R
 import id.co.gits.gitsplayground.base.BaseActivity
 import id.co.gits.gitsplayground.databinding.MainActivityBinding
+import id.co.gits.gitsplayground.view.pushnotification.PushNotificationActivity
 
 class MainActivity : BaseActivity() {
 
@@ -16,6 +19,26 @@ class MainActivity : BaseActivity() {
 
         binding.apply {
             replaceFragment(MainFragment.newInstance())
+
+            // Notification background handling
+            val intent = intent
+
+            if (intent != null) {
+                val b = intent.extras
+                if (b != null) {
+                    val keys = b.keySet()
+                    val title = b["title"]
+                    if (title.toString().isNotEmpty()) startActivity(Intent(this@MainActivity, PushNotificationActivity::class.java))
+
+                    for (key in keys) {
+                        Log.d(MainActivity::class.java.simpleName, "DATA => Bundle Contains: key=$key")
+                    }
+                } else {
+                    Log.d(MainActivity::class.java.simpleName, "DATA => onCreate: BUNDLE is null")
+                }
+            } else {
+                Log.d(MainActivity::class.java.simpleName, "DATA => onCreate: INTENT is null")
+            }
         }
     }
 
@@ -30,8 +53,8 @@ class MainActivity : BaseActivity() {
     fun replaceFragment(fragment: Fragment) {
         supportFragmentManager
                 .beginTransaction()
-                .replace(R.id.frame_container, fragment)
-                .addToBackStack(null)
+                .add(R.id.frame_container, fragment)
+                .addToBackStack(fragment::class.java.simpleName)
                 .commit()
     }
 

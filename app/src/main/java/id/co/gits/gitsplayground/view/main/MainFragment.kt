@@ -21,6 +21,7 @@ import id.co.gits.gitsplayground.view.workmanager.WorkmanagerActivity
 import id.co.gits.gitsplayground.view.createpdffromhtml_A4.CreatePdfFromHtmlA4Fragment
 import id.co.gits.gitsplayground.view.animations.AnimationsFragment
 import id.co.gits.gitsplayground.view.recyclerviewpaging.RecyclerviewPagingFragment
+import id.co.gits.gitsplayground.view.pushnotification.PushNotificationActivity
 import kotlinx.android.synthetic.main.main_fragment.*
 
 import id.co.gits.gitsplayground.view.reactiveprogramming.ReactiveProgrammingActivity
@@ -56,7 +57,7 @@ class MainFragment : BaseFragment(), MainItemActionListener {
             menuData.add(MainModel(9, "Recyclerview Paging With API"))
             menuData.add(MainModel(10, "Create PDF From HTML - A4"))
             menuData.add(MainModel(11, "The world of animations"))
-            menuData.add(MainModel(0, "Recyclerview Basic Basic Super Glue"))
+            menuData.add(MainModel(12, "Push Notification"))
             menuData.add(MainModel(0, "Recyclerview Basic"))
             menuData.add(MainModel(0, "Recyclerview Basic Basic Super Glue"))
             menuData.add(MainModel(0, "Recyclerview Basic"))
@@ -87,6 +88,7 @@ class MainFragment : BaseFragment(), MainItemActionListener {
             9 -> fragment = RecyclerviewPagingFragment.newInstance(menu.title)
             10 -> fragment = CreatePdfFromHtmlA4Fragment.newInstance(menu.title)
             11 -> fragment = AnimationsFragment.newInstance()
+            12 -> startActivity(Intent(context, PushNotificationActivity::class.java))
         }
 
         (activity as MainActivity).replaceFragment(fragment)

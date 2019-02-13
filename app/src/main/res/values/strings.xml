@@ -13,4 +13,6 @@
     <string name="recyclerview">Recyclerview</string>
     <string name="nestedscrollview">Nestedscrollview</string>
     <string name="hide_fab_when_scrolling">Hide FAB when scrolling &amp; FAB child visibility with parent</string>
+    <string name="expands_collapse_view">Expands Collapse View</string>
+    <string name="firebase_channel_id">My Channel</string>
 </resources>
