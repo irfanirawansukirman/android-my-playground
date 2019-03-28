@@ -48,16 +48,19 @@ class WorkmanagerActivity : AppCompatActivity() {
                 .build()
 
         val workRequest = OneTimeWorkRequest.Builder(ReceivingWorker::class.java)
+                .setInitialDelay(5, TimeUnit.SECONDS)
                 .setInputData(data)
                 .setConstraints(constraints)
                 .build()
 
         val workRequest2 = OneTimeWorkRequest.Builder(ReceivingWorker::class.java)
+                .setInitialDelay(10, TimeUnit.SECONDS)
                 .setInputData(data)
                 .setConstraints(constraints)
                 .build()
 
         val workRequest3 = OneTimeWorkRequest.Builder(ReceivingWorker::class.java)
+                .setInitialDelay(15, TimeUnit.SECONDS)
                 .setInputData(data)
                 .setConstraints(constraints)
                 .build()
@@ -70,10 +73,10 @@ class WorkmanagerActivity : AppCompatActivity() {
             //WorkManager.getInstance().cancelWorkById(workRequest.id)
 
             //single work
-            WorkManager.getInstance().enqueue(workRequest)
+            // WorkManager.getInstance().enqueue(workRequest)
 
             //periodic work
-            WorkManager.getInstance().enqueue(periodicWorkRequest)
+            // WorkManager.getInstance().enqueue(periodicWorkRequest)
 
             //multiple works with chaining requesting
             WorkManager.getInstance()

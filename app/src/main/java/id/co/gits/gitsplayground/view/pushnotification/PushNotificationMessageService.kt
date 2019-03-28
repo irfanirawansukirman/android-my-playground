@@ -1,6 +1,5 @@
 package id.co.gits.gitsplayground.view.pushnotification
 
-
 import android.app.*
 import android.content.Context
 import android.content.Intent
