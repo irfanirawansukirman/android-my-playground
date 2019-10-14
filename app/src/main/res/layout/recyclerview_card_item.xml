@@ -10,7 +10,7 @@
             type="String" />
     </data>
 
-    <android.support.v7.widget.CardView
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="184dp"
@@ -28,5 +28,5 @@
             android:text="@{nameTitle}"
             android:textSize="16sp"
             tools:text="@string/app_name" />
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
 </layout>

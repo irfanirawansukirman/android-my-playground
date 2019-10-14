@@ -3,28 +3,27 @@ package id.co.gits.gitsplayground.view.main
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.StaggeredGridLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import id.co.gits.gitsplayground.R
 import id.co.gits.gitsplayground.base.BaseFragment
-import id.co.gits.gitsplayground.view.cordinatorlayoutoverlappingbasic.CoorOverlappingViewActivity
 import id.co.gits.gitsplayground.databinding.MainFragmentBinding
+import id.co.gits.gitsplayground.view.animations.AnimationsFragment
+import id.co.gits.gitsplayground.view.bottomnavigationwithnavigationui.BottomNavigationActivity
+import id.co.gits.gitsplayground.view.cordinatorlayoutoverlappingbasic.CoorOverlappingViewActivity
+import id.co.gits.gitsplayground.view.createpdffromhtml_A4.CreatePdfFromHtmlA4Fragment
+import id.co.gits.gitsplayground.view.pushnotification.PushNotificationActivity
+import id.co.gits.gitsplayground.view.reactiveprogramming.ReactiveProgrammingActivity
 import id.co.gits.gitsplayground.view.recyclerviewbasic.RecyclerviewBasicFragment
 import id.co.gits.gitsplayground.view.recyclerviewcard.RecyclerviewCardFragment
 import id.co.gits.gitsplayground.view.recyclerviewgroupbasic.RecyclerviewGroupBasicFragment
 import id.co.gits.gitsplayground.view.recyclerviewgroupsticky.RecyclerviewGroupStickyFragment
-import id.co.gits.gitsplayground.view.workmanager.WorkmanagerActivity
-import id.co.gits.gitsplayground.view.createpdffromhtml_A4.CreatePdfFromHtmlA4Fragment
-import id.co.gits.gitsplayground.view.animations.AnimationsFragment
 import id.co.gits.gitsplayground.view.recyclerviewpaging.RecyclerviewPagingFragment
-import id.co.gits.gitsplayground.view.pushnotification.PushNotificationActivity
+import id.co.gits.gitsplayground.view.workmanager.WorkmanagerActivity
 import kotlinx.android.synthetic.main.main_fragment.*
-
-import id.co.gits.gitsplayground.view.reactiveprogramming.ReactiveProgrammingActivity
 
 /**
  * Dibuat oleh Irfan Irawan Sukirman
@@ -58,7 +57,7 @@ class MainFragment : BaseFragment(), MainItemActionListener {
             menuData.add(MainModel(10, "Create PDF From HTML - A4"))
             menuData.add(MainModel(11, "The world of animations"))
             menuData.add(MainModel(12, "Push Notification"))
-            menuData.add(MainModel(0, "Recyclerview Basic"))
+            menuData.add(MainModel(13, "Bottom Navigation with Navigation"))
             menuData.add(MainModel(0, "Recyclerview Basic Basic Super Glue"))
             menuData.add(MainModel(0, "Recyclerview Basic"))
             menuData.add(MainModel(0, "Recyclerview Basic Basic Super Glue"))
@@ -66,7 +65,7 @@ class MainFragment : BaseFragment(), MainItemActionListener {
             menuData.add(MainModel(0, "Recyclerview Basic Basic Super Glue"))
             menuData.add(MainModel(7, "Reactive Programming"))
 
-            layoutManager = StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL)
+            layoutManager = androidx.recyclerview.widget.StaggeredGridLayoutManager(2, androidx.recyclerview.widget.LinearLayoutManager.VERTICAL)
             setHasFixedSize(true)
             adapter = MainAdapter(menuData, this@MainFragment)
         }
@@ -89,6 +88,7 @@ class MainFragment : BaseFragment(), MainItemActionListener {
             10 -> fragment = CreatePdfFromHtmlA4Fragment.newInstance(menu.title)
             11 -> fragment = AnimationsFragment.newInstance()
             12 -> startActivity(Intent(context, PushNotificationActivity::class.java))
+            13 -> startActivity(Intent(requireContext(), BottomNavigationActivity::class.java))
         }
 
         (activity as MainActivity).replaceFragment(fragment)

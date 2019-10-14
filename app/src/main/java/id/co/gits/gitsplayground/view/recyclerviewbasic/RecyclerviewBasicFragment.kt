@@ -1,8 +1,8 @@
 package id.co.gits.gitsplayground.view.recyclerviewbasic
 
 import android.os.Bundle
-import android.support.v4.content.ContextCompat
-import android.support.v7.widget.DefaultItemAnimator
+import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.DefaultItemAnimator
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -40,7 +40,7 @@ class RecyclerviewBasicFragment : BaseFragment() {
             }
 
             setHasFixedSize(true)
-            itemAnimator = DefaultItemAnimator()
+            itemAnimator = androidx.recyclerview.widget.DefaultItemAnimator()
             addItemDecoration(DividerItemDecoration(ContextCompat.getDrawable(context,
                     R.drawable.cv_recyclerview_item_devider), false, false))
             adapter = RecyclerviewBasicAdapter(dummyData)

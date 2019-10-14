@@ -1,6 +1,6 @@
 package id.co.gits.gitsplayground.view.recyclerviewgroupsticky;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import java.util.Locale;
 

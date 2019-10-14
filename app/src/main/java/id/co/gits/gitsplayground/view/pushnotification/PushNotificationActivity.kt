@@ -10,9 +10,9 @@ import android.graphics.Color
 import android.media.RingtoneManager
 import android.os.Build
 import android.os.Bundle
-import android.support.v4.app.NotificationCompat
-import android.support.v4.content.ContextCompat
-import android.support.v7.app.AppCompatActivity
+import androidx.core.app.NotificationCompat
+import androidx.core.content.ContextCompat
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.iid.FirebaseInstanceId
 import id.co.gits.gitsplayground.R
 import id.co.gits.gitsplayground.view.workmanager.WorkmanagerActivity

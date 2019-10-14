@@ -1,9 +1,9 @@
 package id.co.gits.gitsplayground.view.main
 
 import android.content.Intent
-import android.databinding.DataBindingUtil
+import androidx.databinding.DataBindingUtil
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import android.util.Log
 import android.view.MenuItem
 import id.co.gits.gitsplayground.R
@@ -50,7 +50,7 @@ class MainActivity : BaseActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(showButton)
     }
 
-    fun replaceFragment(fragment: Fragment) {
+    fun replaceFragment(fragment: androidx.fragment.app.Fragment) {
         supportFragmentManager
                 .beginTransaction()
                 .add(R.id.frame_container, fragment)

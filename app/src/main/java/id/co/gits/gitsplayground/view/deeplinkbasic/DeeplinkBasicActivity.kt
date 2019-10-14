@@ -1,7 +1,7 @@
 package id.co.gits.gitsplayground.view.deeplinkbasic
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.widget.Toast
 import com.airbnb.deeplinkdispatch.DeepLink
 import id.co.gits.gitsplayground.R

@@ -1,7 +1,7 @@
 package id.co.gits.gitsplayground.view.animations.expandsncollapseview
 
 import android.os.Build
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.transition.TransitionManager
 import android.view.View

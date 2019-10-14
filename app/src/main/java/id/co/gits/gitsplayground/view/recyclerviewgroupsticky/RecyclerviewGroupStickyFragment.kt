@@ -1,7 +1,7 @@
 package id.co.gits.gitsplayground.view.recyclerviewgroupsticky
 
 import android.os.Bundle
-import android.support.v7.widget.DefaultItemAnimator
+import androidx.recyclerview.widget.DefaultItemAnimator
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -123,7 +123,7 @@ class RecyclerviewGroupStickyFragment : BaseFragment() {
                     R.dimen.actionBarSize), true, getSectionCallback(people))
 
             setHasFixedSize(true)
-            itemAnimator = DefaultItemAnimator()
+            itemAnimator = androidx.recyclerview.widget.DefaultItemAnimator()
             addItemDecoration(sectionItemDecoration)
             adapter = RecyclerviewGroupStickyAdapter(people)
         }

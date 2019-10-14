@@ -1,6 +1,6 @@
 package id.co.gits.gitsplayground.util.widget;
 
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * This class is a ScrollListener for RecyclerView that allows to show/hide

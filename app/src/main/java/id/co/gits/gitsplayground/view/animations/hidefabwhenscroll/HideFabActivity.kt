@@ -3,8 +3,8 @@ package id.co.gits.gitsplayground.view.animations.hidefabwhenscroll
 import android.annotation.SuppressLint
 import android.opengl.Visibility
 import android.os.Bundle
-import android.support.v4.widget.NestedScrollView
-import android.support.v7.app.AppCompatActivity
+import androidx.core.widget.NestedScrollView
+import androidx.appcompat.app.AppCompatActivity
 import android.view.View
 import android.view.animation.AnimationUtils
 import id.co.gits.gitsplayground.R

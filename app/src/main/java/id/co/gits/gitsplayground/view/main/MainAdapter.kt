@@ -1,16 +1,16 @@
 package id.co.gits.gitsplayground.view.main
 
-import android.databinding.DataBindingUtil
-import android.support.v7.widget.RecyclerView
+import androidx.databinding.DataBindingUtil
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import id.co.gits.gitsplayground.R
 import id.co.gits.gitsplayground.databinding.MainItemBinding
 
 class MainAdapter(private var data: List<MainModel>,
-                  private val menuItemListener: MainItemActionListener) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+                  private val menuItemListener: MainItemActionListener) : androidx.recyclerview.widget.RecyclerView.Adapter<androidx.recyclerview.widget.RecyclerView.ViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): androidx.recyclerview.widget.RecyclerView.ViewHolder {
         val viewBinding: MainItemBinding = DataBindingUtil.inflate(LayoutInflater.from(parent.context),
                 R.layout.main_item, parent, false)
 
@@ -19,11 +19,11 @@ class MainAdapter(private var data: List<MainModel>,
 
     override fun getItemCount() = data.size
 
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: androidx.recyclerview.widget.RecyclerView.ViewHolder, position: Int) {
         (holder as MainItemRow).bindItem(data[position], menuItemListener)
     }
 
-    class MainItemRow(private val viewBinding: MainItemBinding) : RecyclerView.ViewHolder(viewBinding.root) {
+    class MainItemRow(private val viewBinding: MainItemBinding) : androidx.recyclerview.widget.RecyclerView.ViewHolder(viewBinding.root) {
 
         fun bindItem(item: MainModel, menuItemListener: MainItemActionListener) {
             viewBinding.menu = item

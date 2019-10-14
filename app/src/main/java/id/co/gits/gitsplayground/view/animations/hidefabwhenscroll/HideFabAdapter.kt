@@ -1,12 +1,12 @@
 package id.co.gits.gitsplayground.view.animations.hidefabwhenscroll
 
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import id.co.gits.gitsplayground.R
 
-class HideFabAdapter : RecyclerView.Adapter<HideFabAdapter.ItemHolder>() {
+class HideFabAdapter : androidx.recyclerview.widget.RecyclerView.Adapter<HideFabAdapter.ItemHolder>() {
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): ItemHolder {
         return ItemHolder(LayoutInflater.from(p0.context).inflate(
@@ -20,7 +20,7 @@ class HideFabAdapter : RecyclerView.Adapter<HideFabAdapter.ItemHolder>() {
 
     }
 
-    class ItemHolder(private val view:View): RecyclerView.ViewHolder(view) {
+    class ItemHolder(private val view:View): androidx.recyclerview.widget.RecyclerView.ViewHolder(view) {
         fun bindItem(){}
     }
 }

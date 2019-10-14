@@ -1,6 +1,6 @@
 package id.co.gits.gitsplayground.view.animations.elementransition
 
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,7 +11,7 @@ import com.bumptech.glide.Glide
 import id.co.gits.gitsplayground.R
 
 class MyListAdapter(private val dataMyList: List<MyListModel>,
-                    private val itemCourierListener: MyListCourier) : RecyclerView.Adapter<MyListAdapter.ItemHolder>() {
+                    private val itemCourierListener: MyListCourier) : androidx.recyclerview.widget.RecyclerView.Adapter<MyListAdapter.ItemHolder>() {
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): ItemHolder {
         return ItemHolder(LayoutInflater.from(p0.context).inflate(R.layout.list_item, p0, false))
@@ -24,7 +24,7 @@ class MyListAdapter(private val dataMyList: List<MyListModel>,
     }
 
 
-    class ItemHolder(private val view: View) : RecyclerView.ViewHolder(view) {
+    class ItemHolder(private val view: View) : androidx.recyclerview.widget.RecyclerView.ViewHolder(view) {
         fun bindItem(item: MyListModel, itemCourierListener: MyListCourier) {
             view.apply {
                 findViewById<TextView>(R.id.txt_list_title).text = item.title

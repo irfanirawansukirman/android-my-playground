@@ -3,9 +3,9 @@ package id.co.gits.gitsplayground.view.animations.elementransition
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.support.v4.app.ActivityOptionsCompat
-import android.support.v4.util.Pair
-import android.support.v4.view.ViewCompat
+import androidx.core.app.ActivityOptionsCompat
+import androidx.core.util.Pair
+import androidx.core.view.ViewCompat
 import android.view.View
 import id.co.gits.gitsplayground.R
 import id.co.gits.gitsplayground.base.BaseActivity

@@ -1,6 +1,6 @@
 package id.co.gits.gitsplayground.view.animations.buttonroundedpressed
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import id.co.gits.gitsplayground.R
 

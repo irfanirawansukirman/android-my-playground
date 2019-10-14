@@ -1,6 +1,6 @@
 package id.co.gits.gitsplayground.base
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 
 /**
  * Dibuat oleh Irfan Irawan Sukirman
